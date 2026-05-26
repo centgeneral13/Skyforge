@@ -93,3 +93,95 @@ button {
 button:hover {
     transform: scale(1.05);
 }
+/* =========================
+   MOBILE RESPONSIVE FIXES
+========================= */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+
+    nav {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* HERO */
+
+    .hero {
+        height: auto;
+        min-height: 80vh;
+
+        padding: 100px 20px;
+
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* PRODUCTS */
+
+    .products {
+        padding: 60px 20px;
+    }
+
+    .products h2 {
+        font-size: 2rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* EXTRA SMALL DEVICES */
+
+@media (max-width: 480px) {
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .card img {
+        height: 200px;
+    }
+}
