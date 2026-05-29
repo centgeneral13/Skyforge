@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Skyforge Shop</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-[#060816] text-white">
+
+  <!-- NAVBAR -->
+
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-black/30">
+
+    <nav class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 py-5 gap-5">
+
+      <h1 class="text-2xl font-bold tracking-[0.3em] text-cyan-300">
+        SKYFORGE
+      </h1>
+
+      <ul class="flex flex-wrap justify-center gap-6 text-sm md:text-base">
+
+        <li>
+          <a href="index.html" class="hover:text-cyan-300 transition">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="shop.html" class="text-cyan-300">
+            Shop
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <!-- PAGE TITLE -->
+
+  <section class="text-center py-20 px-6">
+
+    <h1 class="text-5xl font-bold mb-6">
+      Drone Shop
+    </h1>
+
+    <p class="text-gray-400 max-w-2xl mx-auto">
+      Browse drone parts, prebuilt systems,
+      and custom Skyforge builds.
+    </p>
+
+  </section>
+
+  <!-- PRODUCTS -->
+
+  <section class="max-w-7xl mx-auto px-6 pb-24">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- PRODUCT -->
+
+      <div class="bg-[#101528] rounded-3xl overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=1200&auto=format&fit=crop"
+          class="w-full h-48 md:h-56 object-contain bg-[#0b1120] p-4"
+        >
+
+        <div class="p-6">
+
+          <h2 class="text-2xl font-semibold mb-2">
+            Skyforge X1
+          </h2>
+
+          <p class="text-gray-400 mb-5">
+            Cinematic drone with AI stabilization.
+          </p>
+
+          <div class="flex items-center justify-between">
+
+            <span class="text-cyan-300 text-2xl font-bold">
+              $899
+            </span>
+
+            <button
+              onclick="selectProduct('Skyforge X1')"
+              class="bg-gradient-to-r from-blue-500 to-pink-500 px-5 py-3 rounded-xl"
+            >
+              Buy
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT -->
+
+      <div class="bg-[#101528] rounded-3xl overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1200&auto=format&fit=crop"
+          class="w-full h-48 md:h-56 object-contain bg-[#0b1120] p-4"
+        >
+
+        <div class="p-6">
+
+          <h2 class="text-2xl font-semibold mb-2">
+            FPV Racing Frame
+          </h2>
+
+          <p class="text-gray-400 mb-5">
+            Lightweight carbon fiber racing frame.
+          </p>
+
+          <div class="flex items-center justify-between">
+
+            <span class="text-cyan-300 text-2xl font-bold">
+              $149
+            </span>
+
+            <button
+              onclick="selectProduct('FPV Racing Frame')"
+              class="bg-gradient-to-r from-blue-500 to-pink-500 px-5 py-3 rounded-xl"
+            >
+              Buy
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT -->
+
+      <div class="bg-[#101528] rounded-3xl overflow-hidden">
+
+        <img
+          src="https://images.unsplash.com/photo-1521405924368-64c5b84bec60?q=80&w=1200&auto=format&fit=crop"
+          class="w-full h-48 md:h-56 object-contain bg-[#0b1120] p-4"
+        >
+
+        <div class="p-6">
+
+          <h2 class="text-2xl font-semibold mb-2">
+            Brushless Motor Kit
+          </h2>
+
+          <p class="text-gray-400 mb-5">
+            High performance FPV motor package.
+          </p>
+
+          <div class="flex items-center justify-between">
+
+            <span class="text-cyan-300 text-2xl font-bold">
+              $89
+            </span>
+
+            <button
+              onclick="selectProduct('Brushless Motor Kit')"
+              class="bg-gradient-to-r from-blue-500 to-pink-500 px-5 py-3 rounded-xl"
+            >
+              Buy
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ORDER FORM -->
+
+  <section class="max-w-3xl mx-auto px-6 pb-24">
+
+    <div class="bg-[#101528] rounded-3xl p-8">
+
+      <h2 class="text-3xl font-bold mb-8 text-center">
+        Complete Order
+      </h2>
+
+      <form
+        action="https://formspree.io/f/YOURFORMID"
+        method="POST"
+        class="space-y-6"
+      >
+
+        <input
+          id="productInput"
+          type="text"
+          name="product"
+          placeholder="Selected Product"
+          class="w-full bg-[#0b1120] p-4 rounded-xl"
+          readonly
+        >
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          class="w-full bg-[#0b1120] p-4 rounded-xl"
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          required
+          class="w-full bg-[#0b1120] p-4 rounded-xl"
+        >
+
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Additional order details..."
+          class="w-full bg-[#0b1120] p-4 rounded-xl"
+        ></textarea>
+
+        <button
+          type="submit"
+          class="w-full bg-gradient-to-r from-blue-500 to-pink-500 py-4 rounded-xl text-lg font-semibold"
+        >
+          Submit Order
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <script>
+
+    function selectProduct(productName) {
+
+      document.getElementById("productInput").value = productName;
+
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>
